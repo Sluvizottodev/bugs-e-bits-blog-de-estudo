@@ -1,5 +1,6 @@
 function formatDateTime(date) {
     const dataObj = new Date(date)
+    if (isNaN(dataObj)) return 'Data inválida'
 
     const options = {day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'};
     return dataObj.toLocaleString('pt-BR', options)
