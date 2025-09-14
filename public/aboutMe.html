@@ -4,116 +4,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mim - Meu Blog de Programação</title>
+    <title>Sobre Mim - Stefani | Desenvolvedora</title>
+    <meta name="description"
+        content="Portfólio profissional de Stefani - Desenvolvedora com experiência em Flutter, Java, Spring Boot e tecnologias modernas">
     <link rel="stylesheet" href="../src/styles/style.css">
     <link rel="stylesheet" href="../src/styles/about/aboutMe.css">
+    <link rel="stylesheet" href="src/styles/header/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <main class="about-page container">
-        <section class="about card">
-            <h2>Prazer, <strong>Stefani</strong></h2>
-            <div class="about-content">
-                <img src="../src/assets/img/profile.jpeg" alt="Foto de Stefani" class="profile-img">
-                <p>Sou movida por curiosidade e desafios. Acredito no aprendizado como caminho de crescimento e na
-                    colaboração como forma de gerar impacto. Tecnologia é meu meio, mas é a conexão com pessoas e
-                    experiências que dá sentido à jornada.</p>
+    <div class="page-container">
+    
+
+        <main class="about-page container">
+            <section class="about-hero card">
+                <div class="hero-content">
+                    <h1>Prazer, <span class="gradient-text">Stefani</span></h1>
+                    <p class="hero-subtitle">Desenvolvedora & Estudante de Sistemas da Informação</p>
+                    <p class="hero-description">Sou movida por curiosidade e desafios. Acredito no aprendizado como
+                        caminho de crescimento e na colaboração como forma de gerar impacto. Tecnologia é meu meio, mas
+                        é a conexão com pessoas e experiências que dá sentido à jornada.</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary" onclick="downloadCV()">
+                            <i class="icon-download"></i>
+                            Baixar Currículo
+                        </button>
+                        <a href="../index.html#contact" class="btn-secondary">
+                            <i class="icon-email"></i>
+                            Entrar em Contato
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="../src/assets/img/profile.jpeg" alt="Foto de Stefani - Desenvolvedora"
+                        class="profile-hero-img">
+                    <div class="image-decoration"></div>
+                </div>
+            </section>
+
+            <div class="main-grid">
+                <div class="grid-column">
+                    <section class="technologies card">
+                        <div class="card-header">
+                            <i class="icon-code"></i>
+                            <h2>Tecnologias & Skills</h2>
+                        </div>
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h3>Mobile</h3>
+                                <div class="tech-grid">
+                                    <span class="tech-tag">Flutter</span>
+                                    <span class="tech-tag">Dart</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h3>Backend</h3>
+                                <div class="tech-grid">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">Spring Boot</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Node.js</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h3>Frontend</h3>
+                                <div class="tech-grid">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">React</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h3>Banco de Dados</h3>
+                                <div class="tech-grid">
+                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">SQL</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h3>Cloud & DevOps</h3>
+                                <div class="tech-grid">
+                                    <span class="tech-tag">AWS</span>
+                                    <span class="tech-tag">Git</span>
+                                    <span class="tech-tag">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="education card">
+                        <div class="card-header">
+                            <i class="icon-graduation"></i>
+                            <h2>Formação Acadêmica</h2>
+                        </div>
+                        <ul class="timeline">
+                            <li>
+                                <div class="timeline-badge"></div>
+                                <div class="timeline-content">
+                                    <h3>Bacharelado em Sistemas da Informação</h3>
+                                    <p class="timeline-place">CEFET/RJ</p>
+                                    <p class="timeline-period">2024 – Presente</p>
+                                    <p class="timeline-description">Formação em andamento com foco em desenvolvimento de
+                                        software e gestão de tecnologia.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge"></div>
+                                <div class="timeline-content">
+                                    <h3>Ensino Médio Técnico - Administração</h3>
+                                    <p class="timeline-place">CEFFA CEA Rei Alberto I</p>
+                                    <p class="timeline-period">2021-2023</p>
+                                    <p class="timeline-description">Formação técnica com ênfase em gestão empresarial e
+                                        processos administrativos.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="grid-column">
+                    <section class="experience card">
+                        <div class="card-header">
+                            <i class="icon-briefcase"></i>
+                            <h2>Experiência Profissional</h2>
+                        </div>
+                        <ul class="timeline">
+                            <li>
+                                <div class="timeline-badge"></div>
+                                <div class="timeline-content">
+                                    <h3>Estágio em Desenvolvimento Web</h3>
+                                    <p class="timeline-place">A4PM</p>
+                                    <p class="timeline-period">2025</p>
+                                    <p class="timeline-description">Desenvolvimento de aplicações web com foco em user
+                                        experience e performance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge"></div>
+                                <div class="timeline-content">
+                                    <h3>Facilitador de Aprendizagem</h3>
+                                    <p class="timeline-place">CEFET/RJ</p>
+                                    <p class="timeline-period">2025</p>
+                                    <p class="timeline-description">Suporte ao aprendizado em disciplinas de programação
+                                        e tecnologia.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge"></div>
+                                <div class="timeline-content">
+                                    <h3>Estágio em Desenvolvimento Mobile</h3>
+                                    <p class="timeline-place">X Software House</p>
+                                    <p class="timeline-period">2024</p>
+                                    <p class="timeline-description">Desenvolvimento de aplicativos mobile com Flutter e
+                                        integração com APIs.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge"></div>
+                                <div class="timeline-content">
+                                    <h3>Estágio Administrativo</h3>
+                                    <p class="timeline-place">Sucesso Imóveis Prime</p>
+                                    <p class="timeline-period">2023</p>
+                                    <p class="timeline-description">Gestão de documentos e processos administrativos em
+                                        corretora de imóveis.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="certifications card">
+                        <div class="card-header">
+                            <i class="icon-certificate"></i>
+                            <h2>Certificações</h2>
+                        </div>
+                        <ul class="cert-list">
+                            <li>
+                                <h3>AWS Certified Cloud Practitioner – CLF-02</h3>
+                                <p class="cert-provider">Amazon Web Services</p>
+                                <span class="cert-badge">Cloud Computing</span>
+                            </li>
+                            <li>
+                                <h3>Curso Flutter & Dart</h3>
+                                <p class="cert-provider">Udemy</p>
+                                <span class="cert-badge">Mobile Development</span>
+                            </li>
+                            <li>
+                                <h3>Bancos de dados relacionais - PostgreSQL</h3>
+                                <p class="cert-provider">Udemy</p>
+                                <span class="cert-badge">Database</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
             </div>
 
-        </section>
+            <section class="projects card">
+                <div class="card-header">
+                    <i class="icon-project"></i>
+                    <h2>Projetos em Destaque</h2>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Blog de Estudos</h3>
+                        <p>Plataforma para compartilhamento de conhecimentos em programação e tecnologia.</p>
+                        <div class="project-techs">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Firebase</span>
+                        </div>
+                        <a href="#" class="project-link">Ver Projeto →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Aplicativo de Controle de Tarefas</h3>
+                        <p>App mobile para gerenciamento de tarefas com sincronização em nuvem.</p>
+                        <div class="project-techs">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Dart</span>
+                        </div>
+                        <a href="#" class="project-link">Ver Projeto →</a>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-        <section class="technologies card">
-            <h2>Tecnologias</h2>
-            <div class="tech-grid">
-                <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">Java</span>
-                <span class="tech-tag">Spring Boot</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">C</span>
-                <span class="tech-tag">SQL</span>
-                <span class="tech-tag">AWS (Cloud Practitioner)</span>
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">CSS</span>
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">PostgreSQL</span>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Stefani. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="../index.html">Início</a>
+                    <a href="aboutMe.html">Sobre</a>
+                    <a href="../index.html#projects">Projetos</a>
+                    <a href="../index.html#contact">Contato</a>
+                </div>
             </div>
-        </section>
-
-
-        <section class="education card">
-            <h2>Formação Acadêmica</h2>
-            <ul class="timeline">
-                <li>
-                    <h3>Bacharelado em Sistemas da Informação</h3>
-                    <p>CEFET/RJ (2024 – presente)</p>
-                </li>
-                <li>
-                    <h3>Ensino médio técnico - Administração</h3>
-                    <p>CEFFA CEA Rei Alberto I (2021-2023)</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="certifications card">
-            <h2>Certificações</h2>
-            <ul class="cert-list">
-                <li>
-                    <h3>AWS Certified Cloud Practitioner – CLF-02</h3>
-                    <p>Amazon Web Services</p>
-                </li>
-                <li>
-                    <h3>Curso Flutter & Dart</h3>
-                    <p>Udemy</p>
-                </li>
-                <li>
-                    <h3>Bancos de dados relacionais - PostgreSQL</h3>
-                    <p>Udemy</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="experience card">
-            <h2>Experiências</h2>
-            <ul class="timeline">
-                <li>
-                    <h3>Estágio em Desenvolvimento Web</h3>
-                    <p>A4PM (2025)</p>
-                </li>
-                <li>
-                    <h3>Facilitador de aprendizagem</h3>
-                    <p>CEFET/RJ (2025)</p>
-                </li>
-                <li>
-                    <h3>Estágio em Desenvolvimento Mobile</h3>
-                    <p>X Software House (2024)</p>
-                </li>
-                <li>
-                    <h3>Estágio administrativo</h3>
-                    <p>Sucesso Imóveis Prime (2023)</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="projects card">
-            <h2>Projetos</h2>
-            <ul class="project-list">
-                <li>
-                    <h3>Blog de Estudos</h3>
-                    <p>HTML, CSS, JS, Firebase</p>
-                </li>
-                <li>
-                    <h3>Aplicativo de Controle de Tarefas</h3>
-                    <p>Flutter e Firebase</p>
-                </li>
-            </ul>
-        </section>
-    </main>
-
-    <footer class="footer container">
-        <p>&copy; 2025 Stefani.</p>
-    </footer>
-
+        </footer>
+    </div>
+    <script type="module">
+        import loadHeader from '../src/utils/loadHeader.js';
+        loadHeader();
+    </script>
+    <script src="../src/utils/downloadCV.js"></script>
     <script src="../src/main.js"></script>
 </body>
 
