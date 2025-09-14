@@ -4,69 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Meu Blog de Programação</title>
+    <title>Sobre Mim - Meu Blog de Programação</title>
     <link rel="stylesheet" href="../src/styles/style.css">
+    <link rel="stylesheet" href="../src/styles/about/aboutMe.css">
 </head>
 
 <body>
-    <!-------- Main -------->
     <main class="about-page container">
-
         <section class="about card">
-            <h2>Quem sou eu</h2>
-            <p>Oi! Eu sou <strong>Stefani</strong>, desenvolvedora em formação, apaixonada por tecnologia e programação.
-                Aqui compartilho minha trajetória acadêmica, certificações, experiências e projetos pessoais.</p>
+            <h2>Prazer, <strong>Stefani</strong></h2>
+            <div class="about-content">
+                <img src="../src/assets/img/profile.jpeg" alt="Foto de Stefani" class="profile-img">
+                <p>Sou movida por curiosidade e desafios. Acredito no aprendizado como caminho de crescimento e na
+                    colaboração como forma de gerar impacto. Tecnologia é meu meio, mas é a conexão com pessoas e
+                    experiências que dá sentido à jornada.</p>
+            </div>
+
         </section>
 
         <section class="technologies card">
             <h2>Tecnologias</h2>
-            <ul class="tech-list">
-                <li>Flutter / Dart</li>
-                <li>Java / Kotlin</li>
-                <li>JavaScript / TypeScript</li>
-                <li>Python</li>
-                <li>HTML / CSS</li>
-                <li>Firebase / PostgreSQL</li>
-            </ul>
+            <div class="tech-grid">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">C</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">AWS (Cloud Practitioner)</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">PostgreSQL</span>
+            </div>
         </section>
+
 
         <section class="education card">
             <h2>Formação Acadêmica</h2>
-            <ul>
-                <li>Bacharelado em Ciência da Computação – Universidade XYZ (2023 – presente)</li>
-                <li>Curso de Desenvolvimento Mobile – Faculdade ABC (2022)</li>
+            <ul class="timeline">
+                <li>
+                    <h3>Bacharelado em Sistemas da Informação</h3>
+                    <p>CEFET/RJ (2024 – presente)</p>
+                </li>
+                <li>
+                    <h3>Ensino médio técnico - Administração</h3>
+                    <p>CEFFA CEA Rei Alberto I (2021-2023)</p>
+                </li>
             </ul>
         </section>
 
         <section class="certifications card">
             <h2>Certificações</h2>
-            <ul>
-                <li>Curso Flutter & Dart – Udemy</li>
-                <li>Java Avançado – Alura</li>
+            <ul class="cert-list">
+                <li>
+                    <h3>AWS Certified Cloud Practitioner – CLF-02</h3>
+                    <p>Amazon Web Services</p>
+                </li>
+                <li>
+                    <h3>Curso Flutter & Dart</h3>
+                    <p>Udemy</p>
+                </li>
+                <li>
+                    <h3>Bancos de dados relacionais - PostgreSQL</h3>
+                    <p>Udemy</p>
+                </li>
             </ul>
         </section>
 
         <section class="experience card">
             <h2>Experiências</h2>
-            <ul>
-                <li>Estágio em Desenvolvimento Mobile – Empresa XYZ (2024)</li>
-                <li>Projetos freelance com Flutter e Firebase (2023 – presente)</li>
+            <ul class="timeline">
+                <li>
+                    <h3>Estágio em Desenvolvimento Web</h3>
+                    <p>A4PM (2025)</p>
+                </li>
+                <li>
+                    <h3>Facilitador de aprendizagem</h3>
+                    <p>CEFET/RJ (2025)</p>
+                </li>
+                <li>
+                    <h3>Estágio em Desenvolvimento Mobile</h3>
+                    <p>X Software House (2024)</p>
+                </li>
+                <li>
+                    <h3>Estágio administrativo</h3>
+                    <p>Sucesso Imóveis Prime (2023)</p>
+                </li>
             </ul>
         </section>
 
         <section class="projects card">
             <h2>Projetos</h2>
-            <ul>
-                <li>Blog de Estudos – HTML, CSS, JS, Firebase</li>
-                <li>Aplicativo de Controle de Tarefas – Flutter e Firebase</li>
+            <ul class="project-list">
+                <li>
+                    <h3>Blog de Estudos</h3>
+                    <p>HTML, CSS, JS, Firebase</p>
+                </li>
+                <li>
+                    <h3>Aplicativo de Controle de Tarefas</h3>
+                    <p>Flutter e Firebase</p>
+                </li>
             </ul>
         </section>
-
     </main>
 
-    <!-------- Footer -------->
     <footer class="footer container">
-        <p>&copy; 2025 Stefani. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Stefani.</p>
     </footer>
 
     <script src="../src/main.js"></script>
