@@ -13,12 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
 </head>
 
 <body>
     <div class="page-container">
-
         <main class="about-page container">
             <section class="about-hero card">
                 <div class="hero-content">
@@ -29,11 +27,11 @@
                         é a conexão com pessoas e experiências que dá sentido à jornada.</p>
                     <div class="hero-actions">
                         <button class="btn-primary" onclick="downloadCV()">
-                            <i class="icon-download"></i>
+                            <i class="fa-solid fa-download"></i>
                             Baixar Currículo
                         </button>
                         <a href="../index.html#contact" class="btn-secondary">
-                            <i class="icon-email"></i>
+                            <i class="fa-solid fa-envelope"></i>
                             Entrar em Contato
                         </a>
                     </div>
@@ -49,49 +47,49 @@
                 <div class="grid-column">
                     <section class="technologies card">
                         <div class="card-header">
-                            <i class="icon-code"></i>
+                            <i class="fa-solid fa-laptop-code"></i>
                             <h2>Tecnologias & Skills</h2>
                         </div>
                         <div class="tech-categories">
                             <div class="tech-category">
                                 <h3>Mobile</h3>
                                 <div class="tech-grid">
-                                    <span class="tech-tag">Flutter</span>
-                                    <span class="tech-tag">Dart</span>
+                                    <span class="tech-tag"><i class="fa-brands fa-flutter"></i> Flutter</span>
+                                    <span class="tech-tag"><i class="fa-solid fa-code"></i> Kotlin</span>
                                 </div>
                             </div>
                             <div class="tech-category">
                                 <h3>Backend</h3>
                                 <div class="tech-grid">
-                                    <span class="tech-tag">Java</span>
-                                    <span class="tech-tag">Spring Boot</span>
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag"><i class="fa-brands fa-java"></i> Java</span>
+                                    <span class="tech-tag"><i class="fa-solid fa-server"></i> Spring Boot</span>
+                                    <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                                    <!-- <span class="tech-tag"><i class="fa-brands fa-node-js"></i> Node.js</span> -->
                                 </div>
                             </div>
                             <div class="tech-category">
                                 <h3>Frontend</h3>
                                 <div class="tech-grid">
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">HTML</span>
-                                    <span class="tech-tag">CSS</span>
-                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                                    <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML</span>
+                                    <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                                    <span class="tech-tag"><i class="fa-brands fa-react"></i> React</span>
                                 </div>
                             </div>
                             <div class="tech-category">
                                 <h3>Banco de Dados</h3>
                                 <div class="tech-grid">
-                                    <span class="tech-tag">MySQL</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <span class="tech-tag">SQL</span>
+                                    <span class="tech-tag"><i class="fa-solid fa-database"></i> MySQL</span>
+                                    <span class="tech-tag"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+                                    <span class="tech-tag"><i class="fa-solid fa-database"></i> SQL</span>
                                 </div>
                             </div>
                             <div class="tech-category">
                                 <h3>Cloud & DevOps</h3>
                                 <div class="tech-grid">
-                                    <span class="tech-tag">AWS</span>
-                                    <span class="tech-tag">Git</span>
-                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag"><i class="fa-brands fa-aws"></i> AWS</span>
+                                    <span class="tech-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+                                    <!--<span class="tech-tag"><i class="fa-solid fa-cube"></i> Docker</span> -->
                                 </div>
                             </div>
                         </div>
@@ -99,7 +97,7 @@
 
                     <section class="education card">
                         <div class="card-header">
-                            <i class="icon-graduation"></i>
+                            <i class="fa-solid fa-graduation-cap"></i>
                             <h2>Formação Acadêmica</h2>
                         </div>
                         <ul class="timeline">
@@ -130,7 +128,7 @@
                 <div class="grid-column">
                     <section class="experience card">
                         <div class="card-header">
-                            <i class="icon-briefcase"></i>
+                            <i class="fa-solid fa-briefcase"></i>
                             <h2>Experiência Profissional</h2>
                         </div>
                         <ul class="timeline">
@@ -179,7 +177,7 @@
 
                     <section class="certifications card">
                         <div class="card-header">
-                            <i class="icon-certificate"></i>
+                            <i class="fa-solid fa-certificate"></i>
                             <h2>Certificações</h2>
                         </div>
                         <ul class="cert-list">
@@ -205,7 +203,7 @@
 
             <section id="projects" class="projects card">
                 <div class="card-header">
-                    <i class="icon-project"></i>
+                    <i class="fa-solid fa-diagram-project"></i>
                     <h2>Projetos em Destaque</h2>
                 </div>
                 <div class="projects-grid">
@@ -234,6 +232,7 @@
             </section>
         </main>
     </div>
+
     <script type="module">
         import loadHeader from '../src/utils/loadHeader.js';
         import loadFooter from '../src/utils/loadFooter.js';
