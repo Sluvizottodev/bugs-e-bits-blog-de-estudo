@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="src/styles/header/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
 <body>
     <div class="page-container">
-    
 
         <main class="about-page container">
             <section class="about-hero card">
@@ -233,21 +233,11 @@
                 </div>
             </section>
         </main>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <p>&copy; 2025 Stefani. Todos os direitos reservados.</p>
-                <div class="footer-links">
-                    <a href="../index.html">Início</a>
-                    <a href="aboutMe.html">Sobre</a>
-                    <a href="../index.html#projects">Projetos</a>
-                    <a href="../index.html#contact">Contato</a>
-                </div>
-            </div>
-        </footer>
     </div>
     <script type="module">
         import loadHeader from '../src/utils/loadHeader.js';
+        import loadFooter from '../src/utils/loadFooter.js';
+        loadFooter();
         loadHeader();
     </script>
     <script src="../src/utils/downloadCV.js"></script>

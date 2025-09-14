@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Blog de Programação</title>
+    <title>Blog de Programação - Stefani</title>
+    <meta name="description"
+        content="Blog de programação da Stefani, compartilhando conhecimentos em desenvolvimento, estudos da faculdade e experiências na área de tecnologia">
     <link rel="stylesheet" href="../src/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body>
-    <!-- header injetado main.js -->
 
-    <!---------------------------------- Main ---------------------------------->
-    <main>
-        <section class="about container card">
-            <img src="src/assets/img/minha-foto.jpg" alt="Foto da Stefani" class="about-img">
-            <div class="about-text">
-                <h2>Quem sou eu</h2>
-                <p>Oi! Eu sou <strong>Stefani</strong>, desenvolvedora em formação, apaixonada por programação e tecnologia.
-                    Neste blog compartilho meus estudos da faculdade e aprendizados em programação.</p>
-                <a href="aboutMe.html" class="btn-link">Saiba mais →</a>
+<body>
+    <!-- Header será injetado pelo main.js -->
+
+    <main class="homepage">
+        <!-- Featured Posts -->
+        <section class="featured-posts container">
+            <div class="section-header">
+                <h2>Posts em Destaque</h2>
+                <p>Confira os conteúdos mais recentes e populares do blog</p>
+            </div>
+            <div id="featured-posts" class="posts-grid featured-grid">
+                <!-- Posts em destaque serão carregados aqui -->
             </div>
         </section>
 
-        <section class="posts container">
-            <h2 class="section-title">Posts</h2>
-            <div id="posts" class="posts-grid"></div>
+        <!-- All Posts Section -->
+        <section class="all-posts container">
+            <div class="section-header">
+                <h2>Todos os Posts</h2>
+                <p>Explore todos os conteúdos disponíveis no blog</p>
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="career">Carreira</button>
+                </div>
+            </div>
+            <div id="posts" class="posts-grid all-posts-grid">
+                <!-- Todos os posts serão carregados aqui -->
+            </div>
+            <div class="load-more">
+                <button id="load-more-btn" class="btn-secondary">Carregar mais posts</button>
+            </div>
         </section>
+<!-- talvez uma newletter no futuro -->
     </main>
 
-    <!---------------------------------- Footer ---------------------------------->
-    <footer class="footer container">
-        <p>&copy; 2025 Stefani.</p>
-    </footer>
-
+    <script type="module">
+        import loadHeader from '../src/utils/loadHeader.js';
+        import loadFooter from '../src/utils/loadFooter.js';
+        loadFooter();
+        loadHeader();
+    </script>
     <script type="module" src="../src/main.js"></script>
 </body>
+
 </html>
