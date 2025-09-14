@@ -4,7 +4,7 @@ export default function loadFooter() {
         .then(html => {
             document.body.insertAdjacentHTML('beforeend', html);
         
-            if(!document.querySelector('#footer.css')){
+            if(!document.querySelector('#footer-css')){
                 const linkEl = document.createElement('link');
                 linkEl.id = 'footer.css';
                 linkEl.rel = 'stylesheet';
