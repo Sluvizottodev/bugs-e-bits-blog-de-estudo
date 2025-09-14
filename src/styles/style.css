@@ -1,3 +1,4 @@
+@import url('utils/root.css');
 @import url('utils/base.css');
 
 /*Componentes*/
@@ -6,4 +7,4 @@
 
 /*Páginas*/
 @import url('main/main.css');
-@import url('about/about.css');
+@import url('about/aboutMe.css');
