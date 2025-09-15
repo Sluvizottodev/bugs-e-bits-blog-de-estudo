@@ -1,3 +1,6 @@
+@import url('../utils/root.css');
+@import url('../utils/base.css');
+@import url(responsividadeFooter.css);
 .footer {
     background: var(--color-bg-alt);
     border-top: 1px solid var(--color-border);
