@@ -1,0 +1,241 @@
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+    
+    .footer-description {
+        max-width: 250px;
+        font-size: 0.95rem;
+    }
+    
+    .social-link {
+        font-size: 1.3rem;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: var(--space-lg) 0 var(--space-md);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+        text-align: center;
+    }
+    
+    .footer-brand {
+        align-items: center;
+    }
+    
+    .footer-description {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .footer-section {
+        align-items: center;
+    }
+    
+    .footer-links {
+        align-items: center;
+    }
+    
+    .footer-info {
+        align-items: center;
+    }
+    
+    .contact-item {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-content {
+        gap: var(--space-lg);
+    }
+    
+    .footer-logo {
+        font-size: 1.3rem;
+    }
+    
+    .footer-description {
+        max-width: 350px;
+        font-size: 0.9rem;
+    }
+    
+    .footer-title {
+        font-size: 1rem;
+    }
+    
+    .footer-link {
+        font-size: 0.9rem;
+    }
+    
+    .contact-item strong,
+    .contact-item a,
+    .contact-item span {
+        font-size: 0.9rem;
+    }
+    
+    .social-link {
+        font-size: 1.2rem;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: var(--space-lg) 0 var(--space-sm);
+    }
+    
+    .footer-content {
+        gap: var(--space-lg);
+    }
+    
+    .footer-logo {
+        font-size: 1.2rem;
+    }
+    
+    .footer-description {
+        max-width: 300px;
+        font-size: 0.85rem;
+    }
+    
+    .footer-section {
+        gap: var(--space-sm);
+    }
+    
+    .footer-links {
+        gap: var(--space-xxs);
+    }
+    
+    .footer-link {
+        padding: var(--space-xxs) 0;
+        font-size: 0.85rem;
+    }
+    
+    .footer-info {
+        gap: var(--space-xs);
+    }
+    
+    .contact-item {
+        gap: var(--space-xxs);
+    }
+    
+    .contact-item strong {
+        font-size: 0.85rem;
+    }
+    
+    .contact-item a,
+    .contact-item span {
+        font-size: 0.85rem;
+    }
+    
+    .social-link {
+        font-size: 1.1rem;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .copyright p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .footer-content {
+        gap: var(--space-md);
+    }
+    
+    .footer-logo {
+        font-size: 1.1rem;
+    }
+    
+    .footer-description {
+        max-width: 280px;
+        font-size: 0.8rem;
+    }
+    
+    .footer-title {
+        font-size: 0.95rem;
+    }
+    
+    .footer-link {
+        font-size: 0.8rem;
+    }
+    
+    .contact-item strong {
+        font-size: 0.8rem;
+    }
+    
+    .contact-item a,
+    .contact-item span {
+        font-size: 0.8rem;
+    }
+    
+    .social-link {
+        font-size: 1rem;
+        width: 28px;
+        height: 28px;
+    }
+    
+    .copyright p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-height: 480px) and (orientation: landscape) {
+    .footer {
+        padding: var(--space-md) 0 var(--space-sm);
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-md);
+    }
+    
+    .footer-brand {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .footer {
+        border-top-width: 0.5px;
+    }
+    
+    .footer-divider {
+        height: 0.5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-link,
+    .footer-link {
+        transition: none;
+    }
+    
+    .social-link:hover,
+    .footer-link:hover {
+        transform: none;
+    }
+}
