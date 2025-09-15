@@ -1,7 +1,6 @@
 @import url('../base.css');
 @import url('../root.css');
 
-/* ===== HEADER STYLES ===== */
 .navbar {
     position: sticky;
     top: 0;
@@ -21,7 +20,6 @@
     margin: 0 auto;
 }
 
-/* Logo Styles */
 .logo {
     text-decoration: none;
     transition: var(--transition);
@@ -44,7 +42,6 @@
     transform: scale(1.05);
 }
 
-/* Navigation Links */
 .nav-links {
     display: flex;
     gap: var(--space-xl);
@@ -85,43 +82,50 @@
     color: var(--color-primary);
 }
 
-/* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
-    flex-direction: column;
     background: none;
     border: none;
     cursor: pointer;
     padding: var(--space-sm);
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     justify-content: center;
     align-items: center;
-}
-
-.hamburger {
-    width: 25px;
-    height: 2px;
-    background: var(--color-text);
-    margin: 3px 0;
+    position: relative;
+    z-index: 1002;
+    color: var(--color-text);
     transition: var(--transition);
-    border-radius: 2px;
+    border-radius: var(--radius-sm);
 }
 
-/* Active state for menu toggle */
-.menu-toggle.active .hamburger:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+.menu-toggle:hover {
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--color-primary);
 }
 
-.menu-toggle.active .hamburger:nth-child(2) {
+.hamburger-icon,
+.close-icon {
+    font-size: 1.5rem;
+    transition: var(--transition);
+    position: absolute;
+}
+
+.close-icon {
     opacity: 0;
+    transform: rotate(-180deg);
 }
 
-.menu-toggle.active .hamburger:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+.menu-toggle.active .hamburger-icon {
+    opacity: 0;
+    transform: rotate(180deg);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+.menu-toggle.active .close-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
 @media (max-width: 768px) {
     .nav-container {
         padding: var(--space-sm) 0;
@@ -137,7 +141,7 @@
 
     .nav-links {
         position: fixed;
-        top: 60px;
+        top: 70px;
         left: 0;
         width: 100%;
         height: 0;
@@ -148,6 +152,7 @@
         transition: height 0.3s ease;
         box-shadow: var(--shadow-md);
         border-top: 1px solid var(--color-border);
+        z-index: 1001;
     }
 
     .nav-links.active {
@@ -157,10 +162,25 @@
 
     .nav-link {
         width: 100%;
-        text-align: center;
-        padding: var(--space-md);
+        text-align: left; 
+        padding: var(--space-md) var(--space-lg);
         border-radius: 0;
         border-bottom: 1px solid var(--color-border);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; 
+    }
+
+    .nav-link::before {
+        content: '→';
+        margin-right: var(--space-sm);
+        opacity: 0.6;
+        transition: var(--transition);
+    }
+
+    .nav-link:hover::before {
+        opacity: 1;
+        transform: translateX(3px);
     }
 
     .nav-link:last-child {
@@ -175,6 +195,7 @@
     .nav-link.active {
         background: rgba(139, 92, 246, 0.1);
         color: var(--color-primary);
+        padding-left: var(--space-xl);
     }
 }
 
@@ -186,24 +207,51 @@
     .nav-container {
         padding: var(--space-xs) 0;
     }
+
+    .menu-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .hamburger-icon,
+    .close-icon {
+        font-size: 1.3rem;
+    }
+
+    .nav-link {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        padding-left: var(--space-lg);
+    }
 }
 
-/* Animation for menu items */
-@keyframes slideIn {
+@keyframes slideInLeft {
     from {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateX(-20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
 .nav-links.active .nav-link {
-    animation: slideIn 0.3s ease forwards;
+    animation: slideInLeft 0.3s ease forwards;
 }
 
 .nav-links.active .nav-link:nth-child(1) { animation-delay: 0.1s; }
 .nav-links.active .nav-link:nth-child(2) { animation-delay: 0.2s; }
 .nav-links.active .nav-link:nth-child(3) { animation-delay: 0.3s; }
+
+.menu-toggle:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.menu-toggle i {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
