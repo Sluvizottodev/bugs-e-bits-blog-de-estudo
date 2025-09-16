@@ -649,3 +649,10 @@
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
+
+.cert-more {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-sm);
+    font-style: italic;
+}
