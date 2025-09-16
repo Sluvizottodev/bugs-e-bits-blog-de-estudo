@@ -121,4 +121,106 @@
     font-size: 1rem;
 }
 
+/* banner */
+.console-banner {
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-sm) 0;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: var(--space-xl);
+}
 
+.console-outputs {
+    display: flex;
+    gap: var(--space-xl);
+    animation: scrollBanner 40s linear infinite;
+    padding: var(--space-sm) 0;
+    white-space: nowrap;
+    width: max-content;
+}
+
+.console-line {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-xs) var(--space-md);
+    background: rgba(139, 92, 246, 0.05);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.console-line:hover {
+    background: rgba(139, 92, 246, 0.1);
+    transform: translateY(-1px);
+}
+
+.console-line i {
+    font-size: 1.1rem;
+    width: 16px;
+    text-align: center;
+}
+
+.console-line[data-lang="java"] i { color: #007396; }
+.console-line[data-lang="kotlin"] i { color: #7F52FF; }
+.console-line[data-lang="python"] i { color: #3776AB; }
+.console-line[data-lang="js"] i { color: #F7DF1E; }
+.console-line[data-lang="c"] i { color: #A8B9CC; }
+.console-line[data-lang="php"] i { color: #777BB4; }
+
+@keyframes scrollBanner {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.console-banner:hover .console-outputs {
+    animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .console-outputs {
+        gap: var(--space-lg);
+        animation: scrollBanner 30s linear infinite;
+    }
+    .console-line {
+        font-size: 0.8rem;
+        padding: var(--space-xs) var(--space-sm);
+    }
+    .console-line i {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .console-banner {
+        margin-bottom: var(--space-lg);
+    }
+    .console-outputs {
+        gap: var(--space-md);
+        animation: scrollBanner 25s linear infinite;
+    }
+    .console-line {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    .console-line i {
+        font-size: 0.9rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .console-outputs {
+        animation: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .console-line {
+        flex-shrink: 1;
+    }
+}
