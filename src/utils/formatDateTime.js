@@ -1,4 +1,4 @@
-function formatDateTime(date) {
+export function formatDateTime(date) {
     const dataObj = new Date(date)
     if (isNaN(dataObj)) return 'Data inválida'
 
