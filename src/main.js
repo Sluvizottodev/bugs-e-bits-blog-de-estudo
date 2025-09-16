@@ -1,11 +1,19 @@
 import loadHeader from './utils/loadHeader.js';
 import loadFooter from './utils/loadFooter.js';
-import { posts } from './data/posts.js'; 
-import { renderPosts } from './utils/renderPosts.js';
-import loadFooter from './utils/loadFooter.js';
+import { initFilters } from './utils/initFilters.js';
+import { loadPostContent } from './utils/renderPosts.js';
+
+console.log('main.js carregado com sucesso!');
 
 loadHeader();
 loadFooter();
 
-renderPosts(posts, 'featured-posts');
-renderPosts(posts, 'posts');
+if (document.querySelector('.filter-btn')) {
+    initFilters();
+}
+
+if (document.querySelector('.post-article')) {
+    loadPostContent();
+}
+
+export { initFilters, loadPostContent };
