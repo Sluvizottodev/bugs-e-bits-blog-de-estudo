@@ -6,5 +6,6 @@
 @import url('footer/footer.css');
 
 /*Páginas*/
-@import url('main/main.css');
+@import url('index/index.css');
 @import url('about/aboutMe.css');
+@import url('post/post.css');
