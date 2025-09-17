@@ -1,5 +1,5 @@
-@import url('../base.css');
-@import url('../root.css');
+@import url('../utils/base.css');
+@import url('../utils/root.css');
 
 .navbar {
     position: sticky;
