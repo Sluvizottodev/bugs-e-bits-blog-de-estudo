@@ -1,8 +1,8 @@
-import loadHeader from '../../src/utils/loadHeader.js';
-import loadFooter from '../../src/utils/loadFooter.js';
-import { initFilters } from '../../src/utils/initFilters.js';
-import { loadPostContent } from '../../src/utils/loadPost.js';
-import { renderPosts } from '../../src/utils/renderPosts.js';
+import loadHeader from './utils/loadHeader.js';
+import loadFooter from './utils/loadFooter.js';
+import { initFilters } from './utils/initFilters.js';
+import { loadPostContent } from './utils/loadPost.js';
+import { renderPosts } from './utils/renderPosts.js';
 
 console.log('main.js carregado com sucesso!');
 

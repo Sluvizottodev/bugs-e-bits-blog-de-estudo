@@ -1,5 +1,5 @@
 export default function loadHeader() {
-    fetch('components/header.html')
+    fetch('./components/header.html')
         .then(response => response.text())
         .then(html => {
             document.body.insertAdjacentHTML('afterbegin', html);
@@ -20,7 +20,6 @@ export default function loadHeader() {
                 menuToggle.addEventListener('click', () => {
                     menuToggle.classList.toggle('active');
                     navLinksContainer.classList.toggle('active');
-                    
                     document.body.style.overflow = navLinksContainer.classList.contains('active') ? 'hidden' : '';
                 });
 
@@ -45,7 +44,7 @@ export default function loadHeader() {
                 const linkEl = document.createElement('link');
                 linkEl.id = 'header-css';
                 linkEl.rel = 'stylesheet';
-                linkEl.href = 'src/styles/header/header.css';
+                linkEl.href = './styles/header/header.css';
                 document.head.appendChild(linkEl);
             }
         })
