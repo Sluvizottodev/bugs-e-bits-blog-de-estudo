@@ -18,22 +18,67 @@ Se você está começando, foque em entender o pensamento reativo e praticar mui
         imagem: "assets/images/react-intro.jpg"
     },
     {
-        id: 2,
-        titulo: "Spring Boot: Criando APIs RESTful com Boas Práticas",
-        resumo: "Passo a passo para construir APIs robustas com Spring Boot, cobrindo camadas, DTOs, testes e segurança básica.",
-        conteudo: `Desenvolver APIs com Spring Boot é combinar produtividade com um ecossistema maduro. Aqui eu mostro uma arquitetura simples e eficaz: controller, service, repository e modelos DTO para separar entidade de contrato de API. Explico como mapear endpoints REST, validar entradas com Bean Validation e tratar exceções de forma centralizada.
+        "id": 3,
+        "titulo": "Modelos de Software: Do Cascata ao Ágil, Qual Usar?",
+        "resumo": "Um guia descontraído pelos principais modelos de processo de software: Cascata, Prototipação, Espiral, RUP e Ágil. Explicações práticas, comparações e dicas para escolher o melhor para seu projeto.",
+        "conteudo": `Se você já se perguntou como os times de desenvolvimento organizam seu trabalho para construir software, a resposta está nos modelos de processo. Eles são como receitas de bolo: cada um tem seu jeito de misturar os ingredientes (requisitos, código, testes) e assar (entregar) o produto final. Vamos mergulhar nos principais!
 
-Abordo também padrões importantes: DTOs e mapeamento (MapStruct), transações, paginação, e como organizar unit tests e integration tests com Spring Test e MockMvc. Há uma seção sobre segurança: autenticação básica com Spring Security, proteção de endpoints e boas práticas para não expor informações sensíveis.
+# 1. 💧 Modelo Cascata (Waterfall)
+O clássico! É linear e sequencial: primeiro definimos todos os requisitos, depois fazemos o design, aí codificamos, testamos e só então entregamos. Não volta atrás.
+- Como funciona: Parece uma escada: você só sobe um degrau depois de terminar o anterior.
+- Exemplo prático: Construir um prédio. Você não começa a levantar as paredes sem ter a planta aprovada.
+- Melhor para: Projetos com requisitos muito claros e que não mudam (ex.: sistema de contabilidade).
+- Desvantagem: Se o cliente mudar de ideia no meio, o retrabalho é enorme e caro.
 
-Para entrega e observabilidade, falo brevemente sobre logs estruturados, health checks e como empacotar a aplicação para Docker. No fim tem um checklist de revisão antes de subir para produção: testes automatizados, análise de dependências, configuração de profiles e secrets.
+# 2. 🎨 Prototipação
+Aqui, a ideia é criar um rascunho rápido (protótipo) do software para validar ideias com o cliente e ajustar os requisitos antes de desenvolver de verdade.
+- Como funciona: Ciclos rápidos de feedback. Mostra-se uma versão simples, o cliente dá palpite, e você refina.
+- Exemplo prático: Desenhar a interface de um app num papel ou ferramenta de design e mostrar para o usuário antes de codificar.
+- Melhor para: Quando ninguém sabe exatamente como o sistema deve ficar.
+- Cuidado: O cliente pode achar que o protótipo é a versão final e se frustrar.
 
-Exercício proposto: construir uma API CRUD com testes de integração e configurar CI que roda os testes a cada PR. Isso consolida aprendizado e prepara para cenários reais de trabalho.`,
-        dataCriacao: "2024-03-10T14:20:00",
-        categoria: "backend",
-        tags: ["java", "spring", "api"],
-        destaque: true,
-        tempoLeitura: "10 min",
-        imagem: "assets/images/spring-boot-api.jpg"
+# 3. 🔄 Modelo Espiral
+Imagine um caracol: cada volta é um ciclo que passa por quatro quadrantes: planejamento, análise de risco, desenvolvimento e avaliação. É iterativo e focado em gerenciar riscos.
+- Como funciona: A cada volta, você entrega uma versão mais completa do software, sempre avaliando os riscos (técnicos, de prazo, de custo).
+- Exemplo prático: Desenvolver um carro elétrico autônomo. Começa com um modelo básico que anda sozinho em estrada reta (ciclo 1), depois adiciona detecção de obstáculos (ciclo 2), depois navegação urbana (ciclo 3), e assim por diante.
+- Melhor para: Projetos grandes, complexos e de alto risco (ex.: software aeroespacial).
+- Desvantagem: É complexo de gerenciar e exige muita experiência.
+
+# 4. 🧩 RUP (Rational Unified Process)
+É um processo iterativo também, mas bem estruturado. Divide o projeto em fases (Concepção, Elaboração, Construção, Transição) e em disciplinas (Requisitos, Projeto, etc.). É como ter um mapa detalhado para uma viagem.
+- Como funciona: Dirigido por casos de uso e focado na arquitetura. A cada iteração, você passa por várias disciplinas.
+- Exemplo prático: Desenvolver um sistema ERP para uma grande empresa. Você precisa de uma arquitetura robusta desde o início.
+- Melhor para: Projetos grandes que precisam de alta qualidade e documentação.
+- Desvantagem: Pode ser considerado burocrático e pesado para projetos pequenos.
+
+# 5. ⚡ Ágil (e Scrum) - O Foco
+Eis a estrela do século XXI! O Manifesto Ágil valoriza:
+- Indivíduos e interações sobre processos e ferramentas.
+- Software em funcionamento sobre documentação abrangente.
+- Colaboração com o cliente sobre negociação de contratos.
+- Responder a mudanças sobre seguir um plano.
+
+Dentro do Ágil, o *Scrum* é o framework mais popular. Ele divide o trabalho em *Sprints* (iterações de 2-4 semanas). No início de cada Sprint, o time escolhe itens do *Product Backlog* (lista de tarefas priorizada) para executar. Todo dia, uma reunião rápida de 15min (*Daily Scrum*) para sincronizar. No final da Sprint, entrega-se uma versão funcional do software e faz-se uma retrospectiva para melhorar.
+
+- Como funciona: Time pequeno e auto-gerenciável, com Papéis claros (Product Owner, Scrum Master, Dev Team), Artefatos (Backlog, Sprint) e Cerimônias (Planning, Daily, Review, Retro).
+- Exemplo prático: Desenvolver um app de delivery. A cada Sprint, entrega-se uma funcionalidade nova: cadastro de usuários, cardápio online, carrinho de compras, etc.
+- Melhor para: Projetos com requisitos voláteis, que precisam de entrega rápida e adaptação (ex.: startups, produtos inovadores).
+- Desvantagem: Pode virar uma "correria" se não for bem facilitado (Scrum Master faz falta!).
+
+## Como Escolher?
+- Cascata: Requisitos estáveis e bem entendidos.
+- Prototipação: Requisitos incertos e necessidade de validação rápida.
+- Espiral: Projetos críticos e cheios de riscos.
+- RUP: Projetos grandes com necessidade de arquitetura sólida e documentação.
+- Ágil/Scrum: Ambientes dinâmicos, com necessidade de velocidade e flexibilidade.
+
+E aí, qual modelo combina mais com seu projeto? A chave é adaptar e misturar ideias às vezes! O importante é entregar valor de forma consistente. 🚀`,
+        "dataCriacao": "2025-09-18T12:00:00",
+        "categoria": "software",
+        tags: ["modelos", "ágil", "scrum", "processo", "desenvolvimento"],
+        "destaque": true,
+        "tempoLeitura": "12 min",
+        "imagem": "https://www.levty.com/blog/assets/post/diferencas-entre-metodologias-6581a07ae8bea1272c256c57/scrum-levty.webp"
     },
     {
         id: 3,
