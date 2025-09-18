@@ -1,6 +1,3 @@
-@import url('../utils/root.css');
-@import url('../utils/base.css');
-
 .post-page {
     min-height: 100vh;
     background: var(--color-bg);
