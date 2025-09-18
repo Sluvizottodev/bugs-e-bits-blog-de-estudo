@@ -20,7 +20,7 @@ Se você está começando, foque em entender o pensamento reativo e praticar mui
     {
         "id": 3,
         "titulo": "Modelos de Software: Do Cascata ao Ágil, Qual Usar?",
-        "resumo": "Um guia descontraído pelos principais modelos de processo de software: Cascata, Prototipação, Espiral, RUP e Ágil. Explicações práticas, comparações e dicas para escolher o melhor para seu projeto.",
+        "resumo": "Um guia pelos principais modelos de processo de software: Cascata, Prototipação, Espiral, RUP e Ágil. Explicações práticas, comparações e dicas para escolher o melhor para seu projeto.",
         "conteudo": `Se você já se perguntou como os times de desenvolvimento organizam seu trabalho para construir software, a resposta está nos modelos de processo. Eles são como receitas de bolo: cada um tem seu jeito de misturar os ingredientes (requisitos, código, testes) e assar (entregar) o produto final. Vamos mergulhar nos principais!
 
 # 1. 💧 Modelo Cascata (Waterfall)
