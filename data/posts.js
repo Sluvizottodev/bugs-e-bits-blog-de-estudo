@@ -81,22 +81,6 @@ E aí, qual modelo combina mais com seu projeto? A chave é adaptar e misturar i
         "imagem": "https://www.levty.com/blog/assets/post/diferencas-entre-metodologias-6581a07ae8bea1272c256c57/scrum-levty.webp"
     },
     {
-        id: 3,
-        titulo: "Flutter: Desenvolvimento Cross-Platform na Prática",
-        resumo: "Como pensar em widgets, estado e navegação no Flutter para criar apps nativos para iOS e Android com qualidade.",
-        conteudo: `Flutter é poderoso porque unifica UI e lógica com widgets. Neste post detalho o ciclo de vida de widgets, a diferença entre Stateless e Stateful, e mostro como estruturar um app escalável: separação entre apresentação, estado e serviços. Apresento estratégias de gerenciamento de estado (Provider, Riverpod, Bloc) e quando escolher cada uma dependendo da complexidade do projeto.
-
-Falo sobre navegação, rotas nomeadas, animações simples e integração com recursos nativos (câmera, sensores, plugins). Também discuto performance: evitar rebuilds desnecessários, usar const widgets, e profiling com o DevTools do Flutter. Cobro também testes: widget tests e integration tests para garantir que as partes críticas do app funcionem em diferentes dispositivos.
-
-No final proponho um mini-projeto: construir um app de lista com persistência local, consumo de API e testes automáticos. É uma forma prática de colocar em jogo conceitos de arquitetura e qualidade.`,
-        dataCriacao: "2024-03-05T09:15:00",
-        categoria: "mobile",
-        tags: ["flutter", "dart", "mobile"],
-        destaque: false,
-        tempoLeitura: "8 min",
-        imagem: "assets/images/flutter-app.jpg"
-    },
-    {
         id: 4,
         titulo: "Carreira em TI: Como se Tornar um Desenvolvedor Full-Stack",
         resumo: "Um guia realista para planejar a carreira full-stack: habilidades técnicas, soft skills, portfólio e como buscar oportunidades.",
@@ -143,7 +127,24 @@ Finalizo com opções de deploy: containers Docker, orquestração básica e obs
         destaque: false,
         tempoLeitura: "11 min",
         imagem: "assets/images/nodejs-api.jpg"
+    },
+    {
+        id: 7,
+        titulo: "Flutter: Desenvolvimento Cross-Platform na Prática",
+        resumo: "Como pensar em widgets, estado e navegação no Flutter para criar apps nativos para iOS e Android com qualidade.",
+        conteudo: `Flutter é poderoso porque unifica UI e lógica com widgets. Neste post detalho o ciclo de vida de widgets, a diferença entre Stateless e Stateful, e mostro como estruturar um app escalável: separação entre apresentação, estado e serviços. Apresento estratégias de gerenciamento de estado (Provider, Riverpod, Bloc) e quando escolher cada uma dependendo da complexidade do projeto.
+
+Falo sobre navegação, rotas nomeadas, animações simples e integração com recursos nativos (câmera, sensores, plugins). Também discuto performance: evitar rebuilds desnecessários, usar const widgets, e profiling com o DevTools do Flutter. Cobro também testes: widget tests e integration tests para garantir que as partes críticas do app funcionem em diferentes dispositivos.
+
+No final proponho um mini-projeto: construir um app de lista com persistência local, consumo de API e testes automáticos. É uma forma prática de colocar em jogo conceitos de arquitetura e qualidade.`,
+        dataCriacao: "2024-03-05T09:15:00",
+        categoria: "mobile",
+        tags: ["flutter", "dart", "mobile"],
+        destaque: false,
+        tempoLeitura: "8 min",
+        imagem: "assets/images/flutter-app.jpg"
     }
+
 ];
 
 export function getPostsByCategory(category) {
