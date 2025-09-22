@@ -1,5 +1,6 @@
 import { getPostById, getPostsByCategory } from '../../../data/posts.js';
 import { formatDateTime } from './formatDateTime.js';
+import { getCategoryLabel } from './getCategoryLabel.js';
 
 export function loadPostContent() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -72,11 +73,6 @@ function loadRelatedPosts(currentPost, container) {
     } else {
         container.innerHTML = '<p>Nenhum post relacionado encontrado.</p>';
     }
-}
-
-function getCategoryLabel(categoria) {
-    const labels = { frontend: 'Frontend', backend: 'Backend', mobile: 'Mobile', career: 'Carreira' };
-    return labels[categoria] || categoria;
 }
 
 function showError(message) {

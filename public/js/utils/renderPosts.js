@@ -1,9 +1,5 @@
 import { formatDateTime } from './formatDateTime.js';
-
-function getCategoryLabel(categoria) {
-    const labels = { frontend: 'Frontend', backend: 'Backend', mobile: 'Mobile', career: 'Carreira', software: 'Engenharia de Software' };
-    return labels[categoria] || categoria;
-}
+import { getCategoryLabel } from './getCategoryLabel.js';
 
 export function renderPosts(posts, containerId, isFeatured = false) {
     const container = document.getElementById(containerId);
