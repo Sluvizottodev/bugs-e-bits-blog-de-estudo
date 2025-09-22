@@ -13,15 +13,81 @@ Se você está começando, foque em entender o pensamento reativo e praticar mui
         dataCriacao: "2024-03-15T10:30:00",
         categoria: "frontend",
         tags: ["react", "javascript", "frontend"],
-        destaque: true,
+        destaque: false,
         tempoLeitura: "7 min",
         imagem: "assets/images/react-intro.jpg"
     },
     {
-        "id": 3,
-        "titulo": "Modelos de Software: Do Cascata ao Ágil, Qual Usar?",
-        "resumo": "Um guia pelos principais modelos de processo de software: Cascata, Prototipação, Espiral, RUP e Ágil. Explicações práticas, comparações e dicas para escolher o melhor para seu projeto.",
-        "conteudo": `Se você já se perguntou como os times de desenvolvimento organizam seu trabalho para construir software, a resposta está nos modelos de processo. Eles são como receitas de bolo: cada um tem seu jeito de misturar os ingredientes (requisitos, código, testes) e assar (entregar) o produto final. Vamos mergulhar nos principais!
+        id: 12,
+        titulo: "SOLID: Os 5 Princípios Essenciais da Programação Orientada a Objetos",
+        resumo: "Entenda os 5 princípios SOLID (SRP, OCP, LSP, ISP e DIP) e como eles ajudam a criar sistemas mais flexíveis, escaláveis e fáceis de manter.",
+        conteudo: `Os princípios **SOLID** foram popularizados por Robert C. Martin (Uncle Bob) e são um guia prático para escrever código orientado a objetos mais limpo e sustentável. Eles não são regras fixas, mas boas práticas que evitam acoplamento excessivo e aumentam a reutilização de código.
+
+# 1. Single Responsibility Principle (SRP)
+Cada classe deve ter apenas **uma responsabilidade**.  
+Isso reduz a complexidade, facilita testes e manutenção.
+
+Exemplo:
+Uma classe que manipula dados **e** gera relatórios viola o SRP. O ideal é separar: uma classe para persistência e outra para relatórios.
+
+---
+
+# 2. Open-Closed Principle (OCP)
+**Aberto para extensão, fechado para modificação.**  
+Você deve adicionar novos comportamentos sem alterar código existente, apenas estendendo.
+
+Exemplo:
+Evite \`if/else\` para cada tipo de cliente. Use polimorfismo com interfaces, criando uma classe de desconto por tipo de cliente.
+
+---
+
+# 3. Liskov Substitution Principle (LSP)
+Objetos de subclasses devem poder substituir objetos da superclasse **sem quebrar o código**.  
+Se a subclasse não mantém o contrato da classe pai, você está violando o LSP.
+
+Analogia:  
+Um \`Pinguim\` não deveria herdar de \`Pato\` se o método \`voar()\` existe. Pinguins não voam, logo a substituição quebra o sistema.
+
+---
+
+# 4. Interface Segregation Principle (ISP)
+É melhor ter **interfaces pequenas e específicas** do que uma única interface genérica com métodos que nem todos usarão.
+
+➡️ Exemplo:
+Uma interface \`IPrinter\` com \`print()\`, \`scan()\` e \`fax()\` força quem só imprime a implementar métodos inúteis. Melhor dividir em \`IPrint\`, \`IScan\`, \`IFax\`.
+
+---
+
+# 5. Dependency Inversion Principle (DIP)
+Módulos de alto nível não devem depender de módulos de baixo nível, mas de **abstrações**.  
+Detalhes devem depender de abstrações, não o contrário.
+
+Exemplo:
+Em vez de \`NotificationManager\` depender diretamente de \`EmailService\`, ele depende da interface \`MessageService\`. Assim você pode trocar email por SMS sem alterar a regra de negócio.
+
+---
+
+🎯 **Por que aplicar SOLID?**
+- Código mais fácil de **manter**
+- Maior **reuso** de componentes
+- Redução de **acoplamento**
+- Facilita **testes unitários**
+- Evolui o sistema sem quebrar o que já funciona
+
+**Conclusão:**  
+Adotar SOLID não é burocracia. É uma forma de manter seu código vivo, adaptável e pronto para crescer com segurança e qualidade.`,
+        dataCriacao: "2025-09-21T22:00:00",
+        categoria: "engenharia",
+        tags: ["solid", "clean code", "oop", "arquitetura"],
+        destaque: true,
+        tempoLeitura: "10 min",
+        imagem: "assets/images/solid.jpg"
+    },
+    {
+        id: 3,
+        titulo: "Modelos de Software: Do Cascata ao Ágil, Qual Usar?",
+        resumo: "Um guia pelos principais modelos de processo de software: Cascata, Prototipação, Espiral, RUP e Ágil. Explicações práticas, comparações e dicas para escolher o melhor para seu projeto.",
+        conteudo: `Se você já se perguntou como os times de desenvolvimento organizam seu trabalho para construir software, a resposta está nos modelos de processo. Eles são como receitas de bolo: cada um tem seu jeito de misturar os ingredientes (requisitos, código, testes) e assar (entregar) o produto final. Vamos mergulhar nos principais!
 
 # 1. 💧 Modelo Cascata (Waterfall)
 O clássico! É linear e sequencial: primeiro definimos todos os requisitos, depois fazemos o design, aí codificamos, testamos e só então entregamos. Não volta atrás.
@@ -73,12 +139,12 @@ Dentro do Ágil, o *Scrum* é o framework mais popular. Ele divide o trabalho em
 - Ágil/Scrum: Ambientes dinâmicos, com necessidade de velocidade e flexibilidade.
 
 E aí, qual modelo combina mais com seu projeto? A chave é adaptar e misturar ideias às vezes! O importante é entregar valor de forma consistente. 🚀`,
-        "dataCriacao": "2025-09-18T12:00:00",
-        "categoria": "software",
+        dataCriacao: "2025-09-18T12:00:00",
+        categoria: "software",
         tags: ["modelos", "ágil", "scrum", "processo", "desenvolvimento"],
-        "destaque": true,
-        "tempoLeitura": "12 min",
-        "imagem": "https://www.levty.com/blog/assets/post/diferencas-entre-metodologias-6581a07ae8bea1272c256c57/scrum-levty.webp"
+        destaque: true,
+        tempoLeitura: "12 min",
+        imagem: "https://www.levty.com/blog/assets/post/diferencas-entre-metodologias-6581a07ae8bea1272c256c57/scrum-levty.webp"
     },
     {
         id: 4,
@@ -144,7 +210,6 @@ No final proponho um mini-projeto: construir um app de lista com persistência l
         tempoLeitura: "8 min",
         imagem: "assets/images/flutter-app.jpg"
     }
-
 ];
 
 export function getPostsByCategory(category) {
