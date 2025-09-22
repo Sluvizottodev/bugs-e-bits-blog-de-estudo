@@ -81,7 +81,7 @@ Adotar SOLID não é burocracia. É uma forma de manter seu código vivo, adapt�
         tags: ["solid", "clean code", "oop", "arquitetura"],
         destaque: true,
         tempoLeitura: "10 min",
-        imagem: "assets/images/solid.jpg"
+        imagem: "https://media.licdn.com/dms/image/v2/C4E12AQF-JdyljjT5hQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1624732062442?e=2147483647&v=beta&t=q9_rfu_ozrb1P854-G7cab4tQeS-9oSQ2Yyx4drUBdQ"
     },
     {
         id: 3,
