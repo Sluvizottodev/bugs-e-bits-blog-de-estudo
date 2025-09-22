@@ -38,10 +38,16 @@ export function loadPostContent() {
 
 function formatPostContent(content) {
     return content
-        .replace(/\n/g, '<br>')
+        .split(/\n{2,}/) 
+        .map(p => `<p>${p.replace(/\n/g, ' ')}</p>`)
+        .join('')
         .replace(/```([^```]+)```/g, '<pre><code>$1</code></pre>')
-        .replace(/`([^`]+)`/g, '<code>$1</code>');
+        .replace(/`([^`]+)`/g, '<code>$1</code>')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 }
+
+
+
 
 function loadRelatedPosts(currentPost, container) {
     if (!container) return;
