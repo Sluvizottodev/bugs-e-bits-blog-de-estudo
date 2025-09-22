@@ -479,3 +479,13 @@
     background: rgba(255, 255, 255, 0.5);
 }
 
+/*linha de '---'*/
+.post-content hr.post-divider {
+    border: none;
+    border-top: 2px solid var(--color-primary);
+    opacity: 0.3;         
+    margin: 2rem 0;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
