@@ -77,10 +77,10 @@ Em vez de \`NotificationManager\` depender diretamente de \`EmailService\`, ele 
 **Conclusão:**  
 Adotar SOLID não é burocracia. É uma forma de manter seu código vivo, adaptável e pronto para crescer com segurança e qualidade.`,
         dataCriacao: "2025-09-21T22:00:00",
-        categoria: "engenharia",
+        categoria: "software",
         tags: ["solid", "clean code", "oop", "arquitetura"],
         destaque: true,
-        tempoLeitura: "10 min",
+        tempoLeitura: "5 min",
         imagem: "https://media.licdn.com/dms/image/v2/C4E12AQF-JdyljjT5hQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1624732062442?e=2147483647&v=beta&t=q9_rfu_ozrb1P854-G7cab4tQeS-9oSQ2Yyx4drUBdQ"
     },
     {
@@ -157,7 +157,7 @@ O *Scrum* é o framework mais popular:
         categoria: "software",
         tags: ["modelos", "ágil", "scrum", "processo", "desenvolvimento"],
         destaque: true,
-        tempoLeitura: "12 min",
+        tempoLeitura: "8 min",
         imagem: "https://www.levty.com/blog/assets/post/diferencas-entre-metodologias-6581a07ae8bea1272c256c57/scrum-levty.webp"
     },
     {
