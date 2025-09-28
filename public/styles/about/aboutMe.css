@@ -1,4 +1,3 @@
-/*Ainda precisa ser revisto e separado corretamente*/
 .page-container {
     min-height: 100vh;
     display: flex;
@@ -29,6 +28,7 @@
     opacity: 0.6;
 }
 
+/* ===== HERO SECTION ===== */
 .about-hero {
     background: linear-gradient(135deg, var(--color-bg-alt) 0%, rgba(139, 92, 246, 0.05) 100%);
     border: 1px solid var(--color-border);
@@ -191,6 +191,7 @@
     gap: var(--space-lg);
 }
 
+/* ===== CARD COMPONENTS ===== */
 .card {
     background: var(--color-bg-alt);
     border-radius: var(--radius-lg);
@@ -252,6 +253,7 @@
     font-family: var(--font-heading);
 }
 
+/* ===== TECHNOLOGIES SECTION ===== */
 .tech-categories {
     display: flex;
     flex-direction: column;
@@ -264,12 +266,15 @@
     margin-bottom: var(--space-md);
     color: var(--color-text);
     font-family: var(--font-heading);
+    text-align: left;
 }
 
 .tech-grid {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-sm);
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .tech-tag {
@@ -282,6 +287,8 @@
     transition: var(--transition);
     border: 1px solid rgba(139, 92, 246, 0.2);
     cursor: pointer;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .tech-tag:hover {
@@ -291,6 +298,7 @@
     box-shadow: var(--shadow-sm);
 }
 
+/* ===== TIMELINE COMPONENTS ===== */
 .timeline {
     list-style: none;
     padding: 0;
@@ -363,6 +371,7 @@
     margin: 0;
 }
 
+/* ===== CERTIFICATIONS ===== */
 .cert-list {
     list-style: none;
     padding: 0;
@@ -409,6 +418,14 @@
     border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
+.cert-more {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-sm);
+    font-style: italic;
+}
+
+/* ===== PROJECTS SECTION ===== */
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -448,6 +465,7 @@
     flex-wrap: wrap;
     gap: var(--space-xs);
     margin-bottom: var(--space-md);
+    justify-content: flex-start;
 }
 
 .project-techs span {
@@ -457,6 +475,7 @@
     border-radius: 12px;
     font-size: 0.8rem;
     font-weight: 500;
+    flex-shrink: 0;
 }
 
 .project-link {
@@ -474,6 +493,7 @@
     gap: var(--space-sm);
 }
 
+/* ===== FOOTER ===== */
 .footer {
     background: var(--color-bg-alt);
     border-top: 1px solid var(--color-border);
@@ -513,6 +533,48 @@
     color: var(--color-primary);
 }
 
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.btn-primary:focus,
+.btn-secondary:focus,
+.tech-tag:focus,
+.project-link:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 968px) {
     .about-hero {
         grid-template-columns: 1fr;
@@ -529,12 +591,24 @@
         justify-content: center;
     }
     
+    .hero-description {
+        text-align: justify;
+    }
+    
     .main-grid {
         grid-template-columns: 1fr;
     }
     
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .tech-category h3 {
+        text-align: left;
+    }
+    
+    .tech-grid {
+        justify-content: flex-start;
     }
 }
 
@@ -553,6 +627,10 @@
     
     .hero-subtitle {
         font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        text-align: justify;
     }
     
     .profile-hero-img {
@@ -577,16 +655,38 @@
     .footer-links {
         justify-content: center;
     }
+    
+    .tech-category h3 {
+        text-align: left;
+    }
+    
+    .tech-grid {
+        justify-content: flex-start;
+    }
+    
+    .project-techs {
+        justify-content: flex-start;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 1.8rem;
     }
+
+    .hero-description {
+        text-align: justify;
+    }
     
     .btn-primary, .btn-secondary {
         padding: var(--space-md);
         font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
     }
     
     .card-header {
@@ -598,58 +698,61 @@
     .card-header i {
         margin-bottom: var(--space-sm);
     }
+
+    .tech-category h3 {
+        text-align: left;
+    }
     
     .tech-grid {
-        justify-content: center;
+        justify-content: flex-start;
     }
     
     .timeline li {
         padding-left: var(--space-lg);
     }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    .project-techs {
+        justify-content: flex-start;
     }
 }
 
-.card {
-    animation: fadeInUp 0.6s ease forwards;
-    opacity: 0;
-}
-
-.card:nth-child(1) { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.3s; }
-.card:nth-child(4) { animation-delay: 0.4s; }
-.card:nth-child(5) { animation-delay: 0.5s; }
-.card:nth-child(6) { animation-delay: 0.6s; }
-
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+@media (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
     }
-}
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
 
-.btn-primary:focus,
-.btn-secondary:focus,
-.tech-tag:focus,
-.project-link:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-}
+    .hero-description {
+        text-align: justify;
+    }
+    
+    .profile-hero-img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .image-decoration {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .card {
+        padding: var(--space-md);
+    }
+    
+    .tech-tag {
+        font-size: 0.8rem;
+        padding: var(--space-xs) var(--space-sm);
+    }
 
-.cert-more {
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
-    margin-top: var(--space-sm);
-    font-style: italic;
+    .tech-category h3 {
+        text-align: left;
+    }
+    
+    .tech-grid {
+        justify-content: flex-start;
+    }
 }
