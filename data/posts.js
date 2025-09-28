@@ -193,20 +193,16 @@ Conselho de estilo: prefira soluções simples, com componentes reutilizáveis, 
         imagem: "assets/images/css-grid-flexbox.jpg"
     },
     {
-        id: 6,
-        titulo: "Node.js: Construindo APIs Escaláveis e Confiáveis",
-        resumo: "Princípios para projetar APIs eficientes com Node.js e Express, incluindo arquitetura, testes, segurança e deployment.",
-        conteudo: `Node.js traz um modelo de I/O não bloqueante ideal para APIs de alta concorrência. Neste texto exploro arquitetura de serviços: separação de responsabilidades, uso de middleware no Express, e padrões para tratamento de erros e logs. Falo sobre gerenciamento de processos (PM2, clustering), estratégias de cache e otimização de consultas ao banco.
-
-Incluo práticas essenciais de segurança: validação de entrada, proteção contra injection, rate limiting e headers seguros. Abordo testes unitários e de integração (Jest, Supertest) e pipelines de CI/CD que automatizam build, testes e deploy.
-
-Finalizo com opções de deploy: containers Docker, orquestração básica e observability mínima (health checks, metrics). Como proposta prática: construir uma API com autenticação JWT, testes automatizados e deploy em container para entender o fluxo completo.`,
-        dataCriacao: "2024-02-25T13:10:00",
-        categoria: "backend",
-        tags: ["nodejs", "express", "javascript"],
-        destaque: false,
-        tempoLeitura: "11 min",
-        imagem: "assets/images/nodejs-api.jpg"
+        "id": 6,
+        "titulo": "Node.js e Express: Criando APIs que fazem sentido",
+        "resumo": "O que é uma API, como o Express ajuda a organizar tudo e por que o Postman é um ótimo parceiro nos testes.",
+        "conteudo": "Quando a gente fala de API, na prática estamos falando de uma ponte: de um lado temos o cliente (pode ser um app, um site, até outro serviço), e do outro lado temos os dados. O Node.js brilha nesse cenário porque trabalha de forma assíncrona e não fica travado esperando uma resposta. Isso faz com que ele aguente muitas requisições ao mesmo tempo.\n\nO Express entra como um facilitador. Ele ajuda a organizar as rotas (por exemplo: /livros, /autores, /editoras), tratar requisições e dar respostas estruturadas em JSON. Com ele dá para usar middlewares que cuidam de validações, autenticação ou até logs sem poluir o código principal.\n\nNo curso da Alura, a API que criamos é de uma livraria. Parece simples, mas já dá para entender bem como o mundo real vira código. A gente define modelos (como vai ser um livro no banco de dados), cria controladores (as funções que realmente fazem a lógica) e conecta tudo ao MongoDB. O Mongo é um banco NoSQL que guarda os dados em formato parecido com JSON, o que combina muito bem com o Node.\n\nExemplo de uma estrutura mais organizada com Express:\n\n```js\n// server.js\nimport express from 'express';\nimport livrosRoutes from './routes/livrosRoutes.js';\n\nconst app = express();\napp.use(express.json());\n\napp.use('/livros', livrosRoutes);\n\napp.listen(3000, () => {\n  console.log('API rodando em http://localhost:3000');\n});\n```\n\n```js\n// routes/livrosRoutes.js\nimport express from 'express';\nimport { listarLivros, criarLivro } from '../controllers/livrosController.js';\n\nconst router = express.Router();\n\nrouter.get('/', listarLivros);\nrouter.post('/', criarLivro);\n\nexport default router;\n```\n\n```js\n// controllers/livrosController.js\nexport const listarLivros = (req, res) => {\n  res.status(200).json({ mensagem: 'Lista de livros' });\n};\n\nexport const criarLivro = (req, res) => {\n  const novoLivro = req.body;\n  res.status(201).json({ mensagem: 'Livro criado com sucesso', livro: novoLivro });\n};\n```\n\nE claro, nada de criar uma API sem testar. O Postman é ótimo para simular requisições, verificar respostas e até criar coleções de testes automáticos. Ele é quase um companheiro obrigatório nesse processo.\n\nO legal é perceber que por trás de cada rota tem uma estrutura organizada: rotas recebem a requisição, controladores processam, modelos interagem com o banco e a resposta volta para o cliente. É como montar uma linha de produção, cada peça tem sua função.\n\nSe você está começando agora, uma dica prática é: crie uma API simples, tipo de cadastro de tarefas ou de filmes favoritos. Use o Express para organizar as rotas, conecte no MongoDB e brinque bastante com o Postman. Aos poucos dá para ir adicionando camadas como autenticação JWT, paginação de resultados e testes automatizados. É assim que as APIs que a gente usa no dia a dia são construídas.",
+        "dataCriacao": "2025-09-28T11:00:00",
+        "categoria": "backend",
+        "tags": ["nodejs", "express", "mongodb", "rest", "postman"],
+        "destaque": false,
+        "tempoLeitura": "12 min",
+        "imagem": "assets/images/nodejs-express-api.jpg"
     },
     {
         id: 7,
