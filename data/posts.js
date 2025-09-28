@@ -161,20 +161,16 @@ O *Scrum* é o framework mais popular:
         imagem: "https://www.levty.com/blog/assets/post/diferencas-entre-metodologias-6581a07ae8bea1272c256c57/scrum-levty.webp"
     },
     {
-        id: 4,
-        titulo: "Carreira em TI: Como se Tornar um Desenvolvedor Full-Stack",
-        resumo: "Um guia realista para planejar a carreira full-stack: habilidades técnicas, soft skills, portfólio e como buscar oportunidades.",
-        conteudo: `A jornada para ser full-stack combina curiosidade técnica com hábitos de aprendizado constantes. Aqui organizo um roteiro prático: fundamentos (lógica, algoritmos, banco de dados), front-end (HTML, CSS, JS, frameworks) e back-end (linguagens, APIs, banco de dados). Mas a diferença está nas soft skills: comunicação, trabalho em equipe, revisão de código e responsabilidade com qualidade.
-
-Exploro também como montar um portfólio relevante: projetos pequenos e bem documentados, foco nas entregas e em explicar decisões técnicas. Dicas para entrevistas técnicas, resolução de problemas ao vivo, e como transformar feedback em evolução. Menciono caminhos alternativos: especialização em backend, mobile ou devops, dependendo do seu gosto.
-
-Por fim, falo sobre redes de suporte: comunidades, mentoria e cursos práticos. A sugestão final é simples: escolha um projeto que resolva um problema real e entregue-o do início ao fim — isso ensina mais do que qualquer checklist teórico.`,
-        dataCriacao: "2024-03-01T16:45:00",
-        categoria: "career",
-        tags: ["carreira", "fullstack", "ti"],
-        destaque: true,
-        tempoLeitura: "12 min",
-        imagem: "assets/images/career-path.jpg"
+        "id": 4,
+        "titulo": "Carreira em TI: Conexões que impulsionam",
+        "resumo": "Mais do que habilidades técnicas, participar de comunidades e eventos pode abrir portas e acelerar sua carreira em tecnologia.",
+        "conteudo": "Na área de TI, não é só sobre saber programar bem ou ter um portfólio cheio de projetos. As conexões que você cria também fazem diferença. Participar de eventos, meetups e comunidades online coloca você em contato direto com pessoas que já estão vivendo aquilo que você busca.\n\nNetworking em TI não é apenas trocar cartões ou adicionar no LinkedIn. É aprender com histórias reais, descobrir ferramentas novas, entender tendências do mercado e até encontrar oportunidades de trabalho. Muitas vezes, aquela conversa rápida no café de um evento pode virar uma parceria ou até o convite para uma entrevista.\n\nEstar presente em comunidades também ajuda a evoluir como profissional. Você pode tirar dúvidas, compartilhar o que aprendeu e até contribuir com projetos open source. Esse tipo de envolvimento mostra iniciativa e colaboração, duas qualidades muito valorizadas pelas empresas.\n\nO caminho é simples: escolha um evento ou meetup da sua área, participe com atenção e esteja aberto a conversar. Leve perguntas, compartilhe suas experiências e não tenha medo de interagir. No fim das contas, crescer em TI é tanto sobre código quanto sobre pessoas.",
+        "dataCriacao": "2024-03-01T16:45:00",
+        "categoria": "career",
+        "tags": ["carreira", "networking", "comunidade", "eventos"],
+        "destaque": false,
+        "tempoLeitura": "10 min",
+        "imagem": "assets/images/career-networking.jpg"
     },
     {
         id: 5,
