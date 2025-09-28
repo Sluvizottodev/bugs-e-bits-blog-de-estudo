@@ -200,9 +200,9 @@ Conselho de estilo: prefira soluções simples, com componentes reutilizáveis, 
         "dataCriacao": "2025-09-28T11:00:00",
         "categoria": "backend",
         "tags": ["nodejs", "express", "mongodb", "rest", "postman"],
-        "destaque": false,
+        "destaque": true,
         "tempoLeitura": "12 min",
-        "imagem": "assets/images/nodejs-express-api.jpg"
+        "imagem": "https://miro.medium.com/v2/resize:fit:1400/1*qniaB3ztqtM-C3WxD3I4Tg.png"
     },
     {
         id: 7,
