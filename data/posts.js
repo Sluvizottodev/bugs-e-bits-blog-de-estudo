@@ -219,9 +219,9 @@ Lembre-se: sua carreira é construída tanto pelas linhas de código que você e
         "dataCriacao": "2024-03-01T16:45:00",
         "categoria": "career",
         "tags": ["carreira", "networking", "comunidade", "eventos"],
-        "destaque": true,
+        "destaque": false,
         "tempoLeitura": "8 min",
-        "imagem": "assets/images/career-networking.jpg"
+        "imagem": "https://www.findup.com.br/wp-content/uploads/2024/02/Prancheta-2-1024x683.png"
     },
     {
         id: 5,
