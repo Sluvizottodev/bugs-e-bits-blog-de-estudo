@@ -1,21 +1,70 @@
 export const posts = [
     {
         id: 1,
-        titulo: "Introdução ao React: Fundamentos e Primeiros Passos",
-        resumo: "Uma introdução prática ao React: JSX, componentes, estado e como montar sua primeira aplicação passo a passo.",
-        conteudo: `React mudou a forma como pensamos interfaces. Neste post eu guio você pelos conceitos essenciais para começar com confiança: o que é JSX, a diferença entre componentes de função e de classe, como funciona o fluxo de dados com props e state, e por que o conceito de "composição" é tão poderoso.
+        titulo: "Mini Dicionário do Vue.js: Dicas Rápidas para o Dia a Dia",
+        resumo: "Um guia prático com termos e exemplos essenciais do Vue.js para quem está começando a desenvolver aplicações modernas.",
+        conteudo: `Se você está estudando Vue.js para aplicar no estágio, ter um "mini dicionário" pode salvar sua vida quando bater aquela dúvida no meio do código. Aqui vão alguns termos e exemplos essenciais:
 
-Começamos montando uma pequena aplicação Todo: criar componentes simples, passar dados por props e manipular estado local. Em seguida explico hooks fundamentais (useState, useEffect) e mostro situações práticas para cada um. Também comento boas práticas de estrutura de pastas, reutilização de componentes e como pensar testabilidade desde o início.
+**1. v-model**  
+Liga automaticamente inputs ao estado.  
+\`\`\`vue
+<input v-model="nome" placeholder="Digite seu nome" />
+<p>Olá, {{ nome }}!</p>
+\`\`\`
 
-Dicas rápidas de produtividade: use devtools do React, divida a UI em componentes pequenos, escreva testes unitários para lógica importante e adote lint/formatters para manter o código consistente. No final proponho exercícios: criar um formulário controlado, consumir uma API pública e levantar estados de loading/erro.
+**2. v-bind (:)**  
+Usa dados dinâmicos nos atributos HTML.  
 
-Se você está começando, foque em entender o pensamento reativo e praticar muito pequenos componentes. Se já tem familiaridade, experimente hooks customizados e patterns de composição para elevar seu código.`,
+**3. v-if / v-else / v-show**  
+Renderiza ou esconde elementos condicionalmente.  
+\`\`\`vue
+<p v-if="logado">Bem-vindo de volta!</p>
+<p v-else>Faça login</p>
+\`\`\`
+
+**4. v-for**  
+Renderiza listas de forma simples.  
+\`\`\`vue
+<li v-for="item in itens" :key="item.id">{{ item.nome }}</li>
+\`\`\`
+
+**5. Computed Properties**  
+Propriedades que calculam valores dinamicamente.  
+\`\`\`js
+computed: {
+  nomeCompleto() {
+    return this.nome + " " + this.sobrenome
+  }
+}
+\`\`\`
+
+**6. Methods**  
+Funções que você pode chamar dentro da template.  
+\`\`\`js
+methods: {
+  saudacao() {
+    alert("Olá " + this.nome)
+  }
+}
+\`\`\`
+
+**7. Lifecycle Hooks**  
+Momentos da vida do componente, como o \`mounted\` (quando ele carrega).  
+\`\`\`js
+mounted() {
+  console.log("Componente carregado!")
+}
+\`\`\`
+
+Dica final: o Vue Devtools é seu melhor amigo. Com ele você inspeciona estado, props e eventos de cada componente em tempo real.  
+
+Se você decorar pelo menos esses comandos, já vai conseguir montar muita coisa com Vue.js sem travar.`,
         dataCriacao: "2024-03-15T10:30:00",
         categoria: "frontend",
-        tags: ["react", "javascript", "frontend"],
+        tags: ["vuejs", "javascript", "frontend"],
         destaque: false,
-        tempoLeitura: "7 min",
-        imagem: "assets/images/react-intro.jpg"
+        tempoLeitura: "8 min",
+        imagem: "assets/images/vuejs-dictionary.jpg"
     },
     {
         id: 12,
