@@ -1,0 +1,153 @@
+@media (max-width: 1024px) {
+    .featured-grid,
+    .all-posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-grid,
+    .all-posts-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .post-content {
+        padding: var(--space-md);
+    }
+    
+    .post-title {
+        font-size: 1.2rem;
+    }
+    
+    .console-outputs {
+        gap: var(--space-lg);
+        animation: scrollBanner 30s linear infinite;
+    }
+    
+    .console-line {
+        font-size: 0.8rem;
+        padding: var(--space-xs) var(--space-sm);
+    }
+    
+    .console-line i {
+        font-size: 1rem;
+    }
+    
+    .filter-options {
+        gap: var(--space-xs);
+    }
+    
+    .filter-btn {
+        padding: var(--space-xs) var(--space-md);
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage {
+        padding: var(--space-lg) 0;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .console-banner {
+        margin-bottom: var(--space-lg);
+    }
+    
+    .console-outputs {
+        gap: var(--space-md);
+        animation: scrollBanner 25s linear infinite;
+    }
+    
+    .console-line {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    
+    .console-line i {
+        font-size: 0.9rem;
+    }
+    
+    .post-meta {
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: center;
+    }
+    
+    .post-meta-info {
+        gap: var(--space-md);
+    }
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .console-outputs {
+        animation: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .console-line {
+        flex-shrink: 1;
+    }
+    
+    .post-card:hover {
+        transform: none;
+    }
+    
+    .post-card:hover .post-image {
+        transform: none;
+    }
+}
+
+/* efeito extras */
+.post-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover::after {
+    transform: scaleX(1);
+}
+
+.load-more button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.load-more button.loading {
+    position: relative;
+    color: transparent;
+}
+
+.load-more button.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid var(--color-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
