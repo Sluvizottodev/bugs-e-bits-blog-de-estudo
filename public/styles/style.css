@@ -11,6 +11,6 @@
 @import url('post/post.css');
 
 /*responsividade*/
-@import url('index/resp_acessib_extra_index.css');
+@import url('index/resp_acessib_extraIndex.css');
 @import url('about/resp_acessib_extraAboutMe.css');
 @import url('footer/responsividadeFooter.css');
