@@ -1,4 +1,4 @@
-@import url(./resp_acessib_extra_index.css);
+@import url(./resp_acessib_extraIndex.css);
 .homepage {
     padding: var(--space-xl) 0;
 }
@@ -45,6 +45,7 @@
     border: 1px solid var(--color-border);
     height: 100%;
     position: relative;
+    min-height: 400px;
 }
 
 .post-card:hover {
