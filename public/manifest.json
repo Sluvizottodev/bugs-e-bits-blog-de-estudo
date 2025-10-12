@@ -1,0 +1,27 @@
+{
+  "name": "Bugs e Bits - Blog da Stefani",
+  "short_name": "Bugs e Bits",
+  "description": "Blog de programação da Stefani, compartilhando conhecimentos em desenvolvimento, estudos da faculdade e experiências na área de tecnologia",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#111827",
+  "theme_color": "#8b5cf6",
+  "lang": "pt-BR",
+  "categories": ["education", "technology", "programming"],
+  "icons": [
+    {
+      "src": "icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
