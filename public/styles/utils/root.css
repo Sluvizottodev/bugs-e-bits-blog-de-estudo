@@ -7,6 +7,7 @@
     --color-bg-alt: #1f2937;
     --color-text: #f3f4f6;
     --color-text-muted: #9ca3af;
+    --color-border: rgba(139, 92, 246, 0.2);
 
     --font-main: 'Inter', sans-serif;
     --font-heading: 'Poppins', sans-serif;
@@ -26,4 +27,11 @@
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.7);
 
     --transition: all 0.3s ease-in-out;
+
+    /* breakpoints */
+    --mobile-small: 320px;
+    --mobile: 480px;
+    --tablet: 768px;
+    --desktop-small: 1024px;
+    --desktop: 1200px;
 }
