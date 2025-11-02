@@ -298,19 +298,6 @@ Se você está começando agora, uma dica prática é: crie uma API simples, tip
                 imagem: "https://miro.medium.com/v2/resize:fit:1400/1*qniaB3ztqtM-C3WxD3I4Tg.png"
         },
 
-        {
-                id: 7,
-                titulo: "Flutter: Desenvolvimento Cross-Platform na Prática",
-                resumo: "Como pensar em widgets, estado e navegação no Flutter para criar apps nativos para iOS e Android com qualidade.",
-                conteudo: `Flutter é poderoso porque unifica UI e lógica com widgets. Neste post detalho o ciclo de vida de widgets, a diferença entre Stateless e Stateful, e mostro como estruturar um app escalável: separação entre apresentação, estado e serviços. Apresento estratégias de gerenciamento de estado (Provider, Riverpod, Bloc) e quando escolher cada uma dependendo da complexidade do projeto. Falo sobre navegação, rotas nomeadas, animações simples e integração com recursos nativos (câmera, sensores, plugins). Também discuto performance: evitar rebuilds desnecessários, usar const widgets, e profiling com o DevTools do Flutter. Cobro também testes: widget tests e integration tests para garantir que as partes críticas do app funcionem em diferentes dispositivos. No final proponho um mini-projeto: construir um app de lista com persistência local, consumo de API e testes automáticos. É uma forma prática de colocar em jogo conceitos de arquitetura e qualidade.`,
-                dataCriacao: "2024-03-05T09:15:00",
-                categoria: "mobile",
-                tags: ["flutter", "dart", "mobile"],
-                destaque: false,
-                tempoLeitura: "8 min",
-                imagem: "assets/images/flutter-app.jpg"
-        },
-
     {
         id: 9,
         titulo: "Tailwind CSS: Produtividade + Padrões Globais com Config",
