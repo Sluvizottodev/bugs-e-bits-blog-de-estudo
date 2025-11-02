@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-labelledby="twTitle">
+  <title id="twTitle">Tailwind CSS</title>
+  <!-- Monochrome version for masking/coloring via CSS -->
+  <path d="M2 14c4-6 8-6 12-4 4 2 6 6 10 8-4 0-6-2-9-4-4-2-7-2-13 0z" fill="#000"/>
+  <path d="M2 9c4-6 8-6 12-4 4 2 6 6 10 8-4 0-6-2-9-4-4-2-7-2-13 0z" fill="#000"/>
+</svg>
