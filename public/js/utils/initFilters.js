@@ -1,4 +1,4 @@
-import { getPostsByCategory, getFeaturedPosts } from '../../../data/posts.js';
+import { getPostsByCategory, getFeaturedPosts } from '../../../data/postsFunctions.js';
 import { renderPosts } from './renderPosts.js';
 
 let currentPosts = [];

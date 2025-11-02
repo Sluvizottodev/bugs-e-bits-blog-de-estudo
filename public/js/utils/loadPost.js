@@ -1,4 +1,4 @@
-import { getPostById, getPostsByCategory } from '../../../data/posts.js';
+import { getPostById, getPostsByCategory } from '../../../data/postsFunctions.js';
 import { formatDateTime } from './formatDateTime.js';
 import { getCategoryLabel } from './getCategoryLabel.js';
 
