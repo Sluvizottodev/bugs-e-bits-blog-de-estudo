@@ -6,8 +6,8 @@ export function renderPosts(posts, containerId, isFeatured = false) {
     if (!container) return;
 
     container.innerHTML = posts.map(post => `
-        <article class="post-card ${isFeatured ? 'featured' : ''}" data-category="${post.categoria}">
-            ${post.imagem ? `<img src="${post.imagem}" alt="${post.titulo}" class="post-image">` : ''}
+        <article class="post-card ${isFeatured ? 'featured' : ''}" data-category="${post.categoria}" style="max-width: 100%; overflow: hidden;">
+            ${post.imagem ? `<img src="${post.imagem}" alt="${post.titulo}" class="post-image" style="max-width: 100%; height: auto;">` : ''}
             <div class="post-content">
                 <h3 class="post-title">${post.titulo}</h3>
                 <p class="post-excerpt">${post.resumo}</p>
